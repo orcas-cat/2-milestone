@@ -54,4 +54,17 @@ class Player():
 
     def __str__(self):
         return f'Player {self.name} has {len(self.all_cards)} cards.'
+
+
+#ADDING GAME LOGIC
         
+
+player_one = Player("One")
+player_two = Player("Two")
+
+new_deck = Deck()
+new_deck.shuffle()
+
+for x in range(26):
+    player_one.add_cards(new_deck.deal_one())
+    player_two.add_cards(new_deck.deal_one())
